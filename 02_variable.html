@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable in HTML</title>
+</head>
+<body>
+    
+    <h1 id="demo"></h1>
+
+    <script>
+        // var username = "techskillhub.dev"
+
+        function displayMsg(){
+            // let username = "techskillhub.dev"
+            // username = "prakshal.com"
+            const username = "techskillhub.dev"
+            // username = "prakshal.com"
+            document.getElementById('demo').innerHTML = `username : ${username} - ${typeof(username)}`;
+        }
+        
+        // username = "prakshal.com"
+        // document.writeln(username)
+        displayMsg()
+    </script>
+</body>
+</html>

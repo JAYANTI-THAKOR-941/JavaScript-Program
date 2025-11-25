@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Javascript in HTML</title>
+    <style>
+        .active{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+<body id="body">
+    
+    <h1 id="title">The TechSkillHub.!!</h1>
+    <button onclick="changeColor()">changeColor</button>
+    <button onclick="changeTheme()">changeTheme</button>
+    <script>
+        function changeColor(){
+            document.getElementById("title").style = "color:blue"
+        }
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+</html>

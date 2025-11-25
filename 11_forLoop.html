@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop in JavaScript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .product-container{
+            display: flex;
+            padding: 30px;
+        }
+        .product-img img{
+            width: 100%;
+        }
+        .product-desc{
+            margin: 20px;
+        }
+        .product-desc h3{
+            margin: 10px 0;
+            font-size: 30px;
+        }
+        .product-desc p{
+            margin: 10px 0;
+        }
+        b{
+            color: purple;
+        }
+        li{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-container">
+        <div class="product-img">
+            <img src="https://m.media-amazon.com/images/I/61+WH++awsL.jpg" alt="">
+        </div>
+        <div class="product-desc">
+            <h3>Google Pixel 8a 5G</h3>
+            <p>Google Pixel 8a 5G is a compact and powerful mid-range smartphone featuring a 6.1-inch OLED display, Google Tensor G3 processor, 8 GB RAM, dual rear cameras (64 MP + 13 MP), AI-powered photography, IP67 water & dust resistance, Android 14 with 7 years of updates, and 5G connectivity. Available in Aloe, Bay, Porcelain, and Obsidian.</p>
+            <p><b>Price:</b> ₹33,560</p>
+            <p><b>Available Colors:</b>Aloe, Bay, Porcelain, Obsidian</p>
+            <p><b>Key Features:</b></p>
+            <ul id="feature-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        const futureFeatures = [
+            "Better battery life",
+            "Higher storage/memory options",
+            "Improved camera quality",
+            "5G or faster connectivity",
+            "Enhanced security features",
+            "AI-assisted functionalities",
+            "Eco-friendly materials",
+            "Extended warranty or service plans",
+            "Customizable design options",
+            "Integration with smart home devices"
+        ];
+
+        let feature = "";
+
+        for(let f of futureFeatures){
+            feature += "<li>" + f + "</li>";
+        }
+
+        document.getElementById('feature-list').innerHTML = feature;
+    </script>
+</body>
+
+</html>

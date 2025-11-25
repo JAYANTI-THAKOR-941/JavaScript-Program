@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript if else statement</title>
+</head>
+
+<body>
+    <label for="amt">Enter purchase Amount:</label>
+    <input type="number" id="amount">
+    <button onclick="applyDiscount()">Apply</button>
+    <h2 id="p_amount"></h2>
+    <h2 id="discount"></h2>
+    <h2 id="final_amt"></h2>
+    <script>
+        function applyDiscount() {
+            let purchaseAmount = parseInt(document.getElementById('amount').value);
+
+            let disocunt = 0
+            let finalAmount = 0
+
+            if (purchaseAmount >= 5000) {
+                disocunt = purchaseAmount * 0.10;
+                finalAmount = purchaseAmount - disocunt;
+                document.getElementById('p_amount').innerHTML = "PurchaseAmount:" + purchaseAmount;
+                document.getElementById('discount').innerHTML = "Discount:" + disocunt;
+                document.getElementById('final_amt').innerHTML = "Final Amount:" + finalAmount;
+            }
+            else {
+                alert("No Discout..!!")
+                document.getElementById('p_amount').innerHTML = "PurchaseAmount:" + purchaseAmount;
+                 document.getElementById('discount').innerHTML = "Discount:0" ;
+                document.getElementById('final_amt').innerHTML = "Final Amount: 0";
+            }
+        }
+    </script>
+</body>
+
+</html>

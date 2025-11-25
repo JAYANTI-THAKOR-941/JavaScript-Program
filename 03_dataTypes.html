@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types in JavaScript</title>
+</head>
+<body>
+    
+    <h2 id="userInfo"></h2>
+
+    <script>
+        let userId = 1112;
+        let username = "jayanti thakor";
+        let isAuth = true
+        const address = {
+            city:"Gandhinagar",
+            pin:382650
+        }
+
+        document.getElementById('userInfo').innerHTML = "userId : "+userId + " - "+typeof(userId) + "<br>"+"username : "+username + " - "+typeof(username)+"<br> Address : "+address.city +"-"+address.pin + " - "+typeof(address);
+
+    </script>
+</body>
+</html>

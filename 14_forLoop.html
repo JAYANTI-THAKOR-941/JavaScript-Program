@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop in javascript</title>
+</head>
+<body>
+    <h2 id="data"></h2>
+    <script>
+        const orderStatus = ["Pending", "Cancelled","Processing", "Shipped","Pending","Delivered", "Cancelled"];
+
+        let data = "";
+        for(let i=0;i<orderStatus.length;i++){
+            if(orderStatus[i] == "Cancelled" ){
+                continue;
+            }
+            data += orderStatus[i] + "<br>";
+
+        }
+        document.getElementById('data').innerHTML = data;
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="login-form">
+        <div class="input-group">
+            <label for="email">Username:</label>
+            <input type="text" placeholder="enter your username" id="username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="text" placeholder="enter your password" id="pwd">
+        </div>
+        <div class="input-group">
+            <button onclick="authLogin()">Login</button>
+        </div>
+        <h3 id="msg"></h3>
+    </div>
+
+    <script>
+        function authLogin() {
+            const correctUsername = "techskillhub.dev";
+            const correctPassword = "123@pipl";
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('pwd').value;
+
+            let msg = document.getElementById('msg');
+
+            if (username === correctUsername && password === correctPassword) {
+                alert("Login Successfully..!")
+                msg.innerHTML = "Welcome to TechSKillHub.!";
+            }
+            else {
+                alert("Login Failed....!")
+                msg.innerHTML = "Incorrect username & password.!!"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

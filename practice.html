@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display msg using javascript</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h2 id="rollno"></h2>
+
+    <script>
+    function displaymsg(){
+    const username = "CRITICAL.com"
+    document.getElementById('demo').innerHTML = `Username : ${username} - ${typeof(username)}`;
+    }
+
+    function displayrollno(){
+        const rollno = "22D026"
+        document.getElementById('rollno').innerHTML = `Rollno : ${rollno} - ${typeof(rollno)}`;
+    }
+    
+    displaymsg()
+    displayrollno()
+    </script>
+</body>
+</html>

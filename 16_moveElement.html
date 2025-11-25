@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Element using Javascript</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: darkgreen;
+            position: relative;
+            transition: transform 0.5s;
+        }
+
+        .move-right {
+            transform: translateX(200px);
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button onclick="moveElement()">move Element</button>
+    <script>
+        function moveElement(){
+            document.getElementById('box').classList.toggle('move-right')
+        }
+    </script>
+</body>
+
+</html>

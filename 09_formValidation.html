@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="name">Email:</label>
+        <input type="email" id="email">
+        <label for="name">Password:</label>
+        <input type="text" id="password">
+        <button onclick="formValidate()">Submit</button>
+    </form>
+
+    <script>
+        function formValidate(){
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            if(name === "" && email === "" && password === ""){
+                alert("All field are required.!!")
+            }
+            else if(name === ""){
+                alert("Name is Required.!!")
+            }
+            else if(email === ""){
+                alert("Email is Required.!!")
+            }
+            else if(password === ""){
+                alert("Password is Required.!!")
+            }
+            else {
+                alert("Failed to submit form.!!")
+            }
+        }
+    </script>
+</body>
+</html>

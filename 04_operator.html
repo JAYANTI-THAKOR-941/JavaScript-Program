@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript operators</title>
+    <style>
+        .calc{
+            width: 300px;
+            background-color: lightcoral;
+            padding: 20px;
+        }
+        input{
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px 5px;
+            border-radius: 30px;
+            border: 0;
+        }
+        button{
+            padding: 6px 24px;
+            border-radius: 8px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <h2>Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter any Number1">
+        <input type="number" id="num2" placeholder="Enter any Number2">
+        <button onclick="addition()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiplaction()">*</button>
+        <button onclick="division()">/</button>
+        <h3 id="ans"></h3>
+    </div>
+
+    <script>
+
+        function addition() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let ans = num1 + num2;
+            document.getElementById('ans').innerHTML = "Addition:" + ans;
+        }
+        function subtract() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let ans = num1 - num2;
+            document.getElementById('ans').innerHTML = "Subtraction:" + ans;
+        }
+        function multiplaction() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let ans = num1 * num2;
+            document.getElementById('ans').innerHTML = "Multiplaction:" + ans;
+        }
+        function division() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let ans = num1 / num2;
+            document.getElementById('ans').innerHTML = "Division:" + ans;
+        }
+    </script>
+</body>
+
+</html>

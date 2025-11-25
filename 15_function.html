@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in javascript</title>
+    <style>
+
+        img{
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://m.media-amazon.com/images/I/71MTOpvghfL._SX569_.jpg" id="productImg" style="margin: 5%;" width="350px" alt="" onmouseover="changeImg()">
+
+    <script>
+        function changeImg(){
+            document.getElementById('productImg').src = "https://m.media-amazon.com/images/I/81LgcZARf3L._SX569_.jpg"
+        }
+    </script>
+</body>
+</html>

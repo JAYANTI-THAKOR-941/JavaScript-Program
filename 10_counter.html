@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter uSING Switch Case</title>
+</head>
+<body>
+    <h1>Product QTY.</h1>
+    <h3 id="counterDisplay">0</h3>
+    <button onclick="counterUpdate('increment')">+</button>
+    <button onclick="counterUpdate('decrement')">-</button>
+    <button onclick="counterUpdate('reset')">Reset</button>
+
+    <script>
+        let count = 0;
+        function counterUpdate(action){
+            switch(action){
+                case 'increment':
+                    count++;
+                    break;
+                case 'decrement': 
+                    if(count > 0){
+                        count--;
+                    }
+                    break;
+                case 'reset':
+                    count = 0;
+                    break;
+                default:
+                    alert("Unknown Action.!!");
+            }
+            document.getElementById('counterDisplay').innerHTML = count;
+        }   
+    </script>
+</body>
+</html>
