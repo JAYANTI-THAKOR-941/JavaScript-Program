@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function Call & apply Methods</title>
+</head>
+<body>
+    <h2 id="user"></h2>
+    <script>
+        const person = {
+            fullname : function(){
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const person1 = {
+            firstName:"Jayanti",
+            lastName:"Thakor"
+        }
+        const person2 = {
+            firstName:"Alpesh",
+            lastName:"Thakor"
+        }
+        let fullName = person.fullname.bind(person1)
+        // document.getElementById('user').innerHTML = person.fullname.apply(person1,["Gandhinagar"]);
+          document.getElementById('user').innerHTML = fullName();
+
+        const greetMsg = ()=>{
+            alert("Hello Everyone.!!")
+        }
+
+        greetMsg()
+
+        
+    </script>
+</body>
+</html>
