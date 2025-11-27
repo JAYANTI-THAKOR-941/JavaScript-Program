@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HO Function in Js</title>
+</head>
+<body>
+    
+    <h2 id="user"></h2>
+    <h2 id="msg"></h2>
+
+    <script>
+        function userLogin(greetFunction){
+            let username = prompt("Enter your name:");
+            document.getElementById('user').innerHTML = `Welcome ${username}`;
+            greetFunction();
+        }
+
+        function greetUser(){
+            document.getElementById('msg').innerHTML = "Hello User.~!";
+        }
+
+        userLogin(greetUser())
+    </script>
+</body>
+</html>

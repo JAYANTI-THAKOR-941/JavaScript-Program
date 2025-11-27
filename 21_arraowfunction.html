@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="checkPIN()">Enter PIN</button>
+
+    <script>
+        let correctPIN = 8160;
+
+        const verifyPIN = (enterPIN)=>enterPIN === correctPIN;
+        
+        function checkPIN(){
+            let enterPIN = prompt("Enter ATM Pin:");
+
+            if(verifyPIN(Number(enterPIN))){
+                alert("✅ Login Successful! Welcome to your account.");
+            }
+            else{
+                alert("Incorrect PIN..!!")
+            }
+        }
+    </script>
+</body>
+</html>
